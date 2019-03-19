@@ -1,9 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/employees', function(req, res){
-	res.send({type: 'GET'});
-});
+// we need to get the Employee model from our schema file
+const Employee = require('./employees');
+
+            // GET ROUTES
+// GET route, get a list of all the employees from the database
+router.get('/employees/', function(req, res, next){
+    Employee.find({}).then(function(employees){
+        res.send(employees);
+    });
+}); 
 
 router.post('/employees', function(req, res){
 	console.log(req.body);
