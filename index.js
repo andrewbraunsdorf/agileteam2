@@ -1,10 +1,13 @@
 const express = require('express');
+const bodyParser = require("body-parser");
 
 
 
 const app = express();
 
-app.use('/api', require("/api"));
+app.use(bodyParser.json());
+
+app.use('/api', require("./api"));
 
 
 // set up to listen for requests
