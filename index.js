@@ -14,7 +14,7 @@ app.use(express.static('public'));
 
 // use body-parser middleware
 app.use(bodyParser.json());
-
+ 
 // initialize routes
 app.use('/api', require('./routes/api'));
 
