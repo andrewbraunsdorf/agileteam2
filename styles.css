@@ -1,5 +1,24 @@
 body{
 	color: navy;
 	background: black;
-	margin: 20px 20px;
+	margin: 20px 10px;
+}
+.title{
+    color: #eee;
+    text-align: center;
+    font-size: 48px;
+}
+
+
+button {
+    padding: 10px;
+    margin: 10;
+    background: midnightblue;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background: blue;
 }
